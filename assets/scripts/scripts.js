@@ -15,7 +15,18 @@ function randomColorGenerator() {
 
 function insertTriangles() {
     let i;
-    for (i = 0; i < 100; i++) {
+
+    if (window.innerWidth <= 400) {
+        var triangles = 20;
+    }
+    else if (window.innerWidth <= 768 && window.innerWidth > 400) {
+        var triangles = 50;
+    }
+    else {
+        var triangles = 100;
+    }
+
+    for (i = 0; i < triangles; i++) {
         welcomeSection.insertAdjacentHTML('beforeend', `<svg id="triangle" class="triangle triangle-${i}" style="fill: ${randomColorGenerator()}; position: absolute; top: ${numGenerator(90)}%; left: ${numGenerator(90)}%; transform: rotate(${numGenerator(361)}deg)"
         xmlns:dc="http://purl.org/dc/elements/1.1/"
         xmlns:cc="http://creativecommons.org/ns#"
@@ -81,7 +92,8 @@ insertTriangles();
 
 function changeTriangleColor() {
     let i;
-    for (i = 0; i < 100; i++) {
+    let triangles = document.getElementsByClassName("triangle").length;
+    for (i = 0; i < triangles; i++) {
         document.getElementsByClassName("triangle")[i].style.fill = randomColorGenerator();
         document.getElementsByClassName("triangle")[i].style.transform = `rotate(${numGenerator(361)}deg)`;
         document.getElementsByClassName("triangle")[i].style.left = `${numGenerator(95)}%`
