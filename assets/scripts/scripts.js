@@ -84,8 +84,8 @@ function changeTriangleColor() {
     for (i = 0; i < 100; i++) {
         document.getElementsByClassName("triangle")[i].style.fill = randomColorGenerator();
         document.getElementsByClassName("triangle")[i].style.transform = `rotate(${numGenerator(361)}deg)`;
-        document.getElementsByClassName("triangle")[i].style.left = `${numGenerator(100)}%`
-        document.getElementsByClassName("triangle")[i].style.top = `${numGenerator(100)}%`
+        document.getElementsByClassName("triangle")[i].style.left = `${numGenerator(95)}%`
+        document.getElementsByClassName("triangle")[i].style.top = `${numGenerator(95)}%`
     }
 }
 
