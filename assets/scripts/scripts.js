@@ -17,13 +17,13 @@ function insertTriangles() {
     let i;
 
     if (window.innerWidth <= 400) {
-        var triangles = 20;
+        var triangles = 10;
     }
     else if (window.innerWidth <= 768 && window.innerWidth > 400) {
-        var triangles = 50;
+        var triangles = 20;
     }
     else {
-        var triangles = 100;
+        var triangles = 30;
     }
 
     for (i = 0; i < triangles; i++) {
@@ -101,4 +101,4 @@ function changeTriangleColor() {
     }
 }
 
-setInterval(changeTriangleColor, 2000);
+setInterval(changeTriangleColor, 5000);

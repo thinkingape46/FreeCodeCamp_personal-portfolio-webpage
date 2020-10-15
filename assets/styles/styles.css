@@ -7,23 +7,51 @@ body {
     margin: 0;
 }
 
+#navbar {
+    position: fixed;
+    width: 100vw;
+    display: flex;
+    z-index: 2;
+    height: 75px;
+}
+.nav-list {
+    display: flex;
+    width: 90%;
+    margin: auto;
+    justify-content: flex-end;
+}
+.nav-list_item {
+    list-style: none;
+    display: inline-block;
+    padding: 24px 10px 10px 10px;
+    font-size: 1.5rem;
+    font-weight: 300;
+}
+.nav-link {
+    color: #fff;
+    text-decoration: none;
+}
+
 #welcome-section {
+    color: #fff;
     position: relative;
     height: 100vh;
     width: 100vw;
     background: linear-gradient(45deg, #fff, #000);
     margin: 0;
     overflow: hidden;
+    display: flex;
 }
 
 #welcome-section_heading {
-    position: absolute;
+    margin: auto;
+    font-size: 2rem;
+    font-weight: 200;
 }
 
 #triangle {
-    fill: black;
     border: none;
-    height: 50px;
-    width: 50px;
-    transition: all 2s;
+    height: 15px;
+    width: 15px;
+    transition: all 5s linear;
 }
