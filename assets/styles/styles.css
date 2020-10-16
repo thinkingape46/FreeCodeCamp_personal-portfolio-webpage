@@ -20,11 +20,25 @@ body {
     margin: auto;
     justify-content: flex-end;
 }
+/* media queries for nav bar start */
+@media (max-width: 400px) {
+    #navbar {
+        height: 50px;
+    }
+    .nav-list {
+        margin: auto 12px;
+    }
+    .nav-list_item {
+        padding: 0 10px;
+        font-size: 1rem;
+    }
+}
+/* media queries for nav bar end */
 .nav-list_item {
     list-style: none;
     display: inline-block;
-    padding: 24px 10px 10px 10px;
-    font-size: 1.5rem;
+    padding: 24px 15px 10px 10px;
+    font-size: 1.2rem;
     font-weight: 300;
 }
 .nav-link {
@@ -42,16 +56,45 @@ body {
     overflow: hidden;
     display: flex;
 }
-
 #welcome-section_heading {
     margin: auto;
-    font-size: 2rem;
+    font-size: 2.5rem;
+    text-align: center;
     font-weight: 200;
+    z-index: 3;
 }
-
+@media (max-width: 400px) {
+    #welcome-section_heading {
+        font-size: 1.1rem;
+    }
+}
 #triangle {
     border: none;
     height: 15px;
     width: 15px;
     transition: all 5s linear;
+}
+.arrow-double-link {
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 243px;
+    height: 119px;
+    animation: arrow-animation 1s ease-in-out infinite;
+}
+@keyframes arrow-animation {
+    0% {bottom: 15px;}
+    50% {bottom: 30px;}
+    100% {bottom: 15px;}
+}
+@media (max-width: 400px) {
+    .arrow-double-link {
+        width: 100px;
+        height: 50px;
+    }
+}
+.arrow-button {
+    height: 100%;
+    width: 100%;
 }
