@@ -3,38 +3,62 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100;0,200;0,300;0,400;0,600;0,700;1,100&amp;display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/styles/styles.css">
     <title>FreeCodeCamp Personal Portfolio</title>
 </head>
 <body>
     <nav id="navbar">
         <ul class="nav-list">
+            <li class="nav-list_item"><a class="nav-link" href="#welcome-section">About Me</a></li>
             <li class="nav-list_item"><a class="nav-link" href="#projects">Portfolio</a></li>
-            <li class="nav-list_item"><a class="nav-link" href="#">Contact</a></li>
+            <li class="nav-list_item"><a class="nav-link" href="#footer">Contact</a></li>
         </ul>
     </nav>
     <section id="welcome-section">
-        <h1 id="welcome-section_heading">Hello! This is Jagadeesh Kumar</h1>
+        <div class="welcome-section_text">
+            <h1 id="welcome-section_heading">Hello! This is Jagadeesh Kumar</h1>
+            <h3 id="welcome-section_sub-heading">a Front End Developer</h3>
+        </div>
+
         <a href="#projects" class="arrow-double-link"><img src="assets/images/arrow-double.svg" alt="" class="arrow-button"></a>        
     </section>
 
     <section id="projects">
-        <section class="project-tile">
-            <a href="" class="project-link">Tribute Page</a>
-        </section>
-        <section class="project-tile">
-            <a href="" class="project-link">Survey Form</a>
-        </section>
-        <section class="project-tile">
-            <a href="" class="project-link">Technical Documentation</a>
-        </section>
-        <section class="project-tile">
-            <a href="" class="project-link">Product Landing Page</a> 
-        </section>
-        <footer id="footer">
-            <a target="_blank" href="https://github.com/thinkingape46" id="profile-link"></a>
-        </footer>
+        <p class="projects_text">These are some of the projects I have worked on.</p>
+        <div class="project-grid">
+            <div class="project-tile">
+                <a href="https://thinkingape46.github.io/FreeCodeCamp_Marie-Curie-tribute-page/" target="_blank" class="project-link"><img class="project-image" src="assets/images/tribute-page.jpg" alt="tribute page thumbnail"></a>
+                <p class="project-title">Tribute Page</p>
+            </div>
+            <div class="project-tile">
+                <a href="https://thinkingape46.github.io/FreeCodeCamp_survey-form/" target="_blank" class="project-link"><img class="project-image" src="assets/images/survey-form.jpg" alt="survey form thumbnail"></a>
+                <p class="project-title">Survey Form</p>
+            </div>
+            <div class="project-tile">
+                <a href="https://thinkingape46.github.io/FreeCodeCamp_technical-documentation/" target="_blank" class="project-link"><img class="project-image" src="assets/images/technical-documentation.jpg" alt="technical documentation thumbnail"></a>
+                <p class="project-title">Technical Documentation</p>
+            </div>
+            <div class="project-tile">
+                <a href="https://thinkingape46.github.io/FreeCodeCamp_product-landing-page/" target="_blank" class="project-link"><img class="project-image" src="assets/images/travel-site.jpg" alt="product landing page thumbnail"></a>
+                <p class="project-title">Product Landing Page</p>
+            </div>
+            <div id="footer">
+                <a target="_blank" href="https://github.com/thinkingape46" id="profile-link"></a>
+            </div>
+        </div>
     </section>
+
+    <footer id="footer">
+        <div class="footer_sub-heading">
+            <p class="text text--narrow text--large text--center">Contact Me</p>
+        </div>
+        <div class="footer-social">
+            <a target="_blank" href="https://github.com/thinkingape46" id="profile-link" class="profile-link"><img src="assets/images/github.svg" alt="github icon" class="github social-icon social-icon--footer"></a>
+            <a target="_blank" href="https://www.linkedin.com/in/jagadeesh59621/" class="profile-link"><img src="assets/images/linkedin.svg" alt="linkedin icon" class="linkedin social-icon social-icon--footer"></a>
+        </div>
+    </footer>
 
 
     <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>

@@ -1,4 +1,7 @@
 let welcomeSection = document.getElementById("welcome-section");
+let navlinks = document.querySelectorAll(".nav-link");
+let projectTile = document.querySelectorAll(".project-tile");
+
 
 function numGenerator (maxNum) {
     let randomNumber = Math.floor(Math.random() * (maxNum + 1));
@@ -17,7 +20,7 @@ function insertTriangles() {
     let i;
 
     if (window.innerWidth <= 400) {
-        var triangles = 10;
+        var triangles = 15;
     }
     else if (window.innerWidth <= 768 && window.innerWidth > 400) {
         var triangles = 20;
@@ -101,4 +104,14 @@ function changeTriangleColor() {
     }
 }
 
-setInterval(changeTriangleColor, 5000);
+setInterval(changeTriangleColor, 2000);
+
+// Display the name of the project //
+projectTile.forEach(e => {
+    e.addEventListener('mouseover', el => {
+        el.currentTarget.children[1].classList.add("project-title--show");
+    });
+    e.addEventListener('mouseout', el => {
+        el.currentTarget.children[1].classList.remove("project-title--show");
+    })
+})
