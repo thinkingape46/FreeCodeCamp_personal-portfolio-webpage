@@ -8,6 +8,7 @@ body {
     background: linear-gradient(45deg, #fff, #000);
 }
 
+/***************** Navigation Bar Start ************/
 #navbar {
     position: fixed;
     width: 100vw;
@@ -20,9 +21,30 @@ body {
     display: flex;
     width: 90%;
     margin: auto;
+    padding: 0;
     justify-content: flex-end;
 }
-/* media queries for nav bar start */
+.nav-list_item {
+    list-style: none;
+    display: inline-block;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    font-weight: 300;
+}
+.nav-link {
+    color: #fff;
+    text-decoration: none;
+}
+/* Media queries */
+@media (max-width: 650px) {
+    .nav-list {
+        justify-content: center;
+    }
+    .nav-list_item {
+        font-size: 1rem;
+        padding: 15px;
+    }
+}
 @media (max-width: 400px) {
     #navbar {
         height: 50px;
@@ -35,19 +57,13 @@ body {
         font-size: 1rem;
     }
 }
-/* media queries for nav bar end */
-.nav-list_item {
-    list-style: none;
-    display: inline-block;
-    padding: 15px 30px;
-    font-size: 1.2rem;
-    font-weight: 300;
+@media (max-width: 300px) {
+    .nav-list_item {
+        font-size: 0.8rem;
+    }
 }
-.nav-link {
-    color: #fff;
-    text-decoration: none;
-}
-
+/***************** Navigation Bar End ************/
+/*************** Welcome Section Start *************/
 #welcome-section {
     color: #fff;
     position: relative;
@@ -60,6 +76,7 @@ body {
 } 
 .welcome-section_text {
 position: absolute;
+width: 80%;
 top: 50%;
 left: 50%;
 transform: translateX(-50%) translateY(-50%);
@@ -112,12 +129,37 @@ font-weight: 200;
     height: 100%;
     width: 100%;
 }
+/***** media queries welcome section */
+@media (max-width: 768px) {
+    #welcome-section_heading {
+        font-size: 1.5rem;
+    }
+    #welcome-section_sub-heading {
+        font-size: 1.1rem;
+    }
+}
+@media (max-width: 650px) {
+    .arrow-double-link {
+        height: 30px;
+    }
+}
+@media (max-width: 300px) {
+    #welcome-section_heading {
+        font-size: 1rem;
+    }
+    #welcome-section_sub-heading {
+        font-size: 0.7rem;
+    }
+}
 
-/* Project Section start */
+/*************** Welcome Section Start *************/
+
+/********** Project Section start ************/
 #projects {
     padding: 40px 0px;
     box-sizing: border-box;
     margin: auto;
+    height: 80vh;
 }
 .projects_text {
     font-family: 'exo 2', sans-serif;
@@ -171,7 +213,33 @@ font-weight: 200;
 .project-title--show {
     bottom: 0%;
 }
-/* Project Section end */
+/* Media queries */
+@media (max-width: 768px) {
+    .project-grid {
+        grid-template-columns: 150px 150px;
+        grid-template-rows: 150px 150px;
+    }
+    .projects_text {
+        font-size: 1.1rem;
+    }
+}
+@media (max-width: 300px) {
+    .project-grid {
+        grid-template-columns: 100px 100px;
+        grid-template-rows: 100px 100px;
+    }
+    .projects_text {
+        font-size: 1.1rem;
+    }
+    #projects {
+        height: auto;
+    }
+    #footer {
+        height: auto;
+    }
+}
+
+/************ Project Section end ************/
 
 /* Footer social start */
 #footer {
@@ -180,6 +248,7 @@ font-weight: 200;
     display: flex;
     flex-direction: column;
     color: #fff;
+    height: 20vh;
 }
 .about-us {
     margin: 10px auto;
