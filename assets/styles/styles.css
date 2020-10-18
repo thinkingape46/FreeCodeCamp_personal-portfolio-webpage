@@ -140,7 +140,7 @@ font-weight: 200;
 }
 @media (max-width: 650px) {
     .arrow-double-link {
-        height: 30px;
+        height: 60px;
     }
 }
 @media (max-width: 300px) {
